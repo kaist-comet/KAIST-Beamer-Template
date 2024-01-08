@@ -4,20 +4,39 @@
 \documentclass[mathserif,10pt]{beamer}
 
 
-\usetheme{USFblack}
+\usetheme{Daejeon}
+
+% Some font recommendation, compile with xelatex
+% Get Fira Sans fonts:   https://github.com/mozilla/Fira
+
+% Font setting 
+\usepackage{fontspec}
+\setsansfont[ItalicFont={Fira Sans Light Italic},%
+             BoldFont={Fira Sans},%
+             BoldItalicFont={Fira Sans Italic}]%
+            {Fira Sans Light}%
+\setmonofont[BoldFont={Fira Mono Medium}]{Fira Mono}%
+
+% 한글 포트 셋팅. Noto Sans KR
+% https://fonts.google.com/noto/specimen/Noto+Sans+KR
+\usepackage{xetexko}
+\setmainhangulfont[BoldFont={Noto Sans KR}]{Noto Sans KR Light}
+\setsanshangulfont[BoldFont={Noto Sans KR}]{Noto Sans KR Light}
+
+
 
 
 
 \title{PRESENTATION SLIDE TEMPLATE}
-\author[C Kwon]{Someone Else\inst{1} \and Changhyun Kwon\inst{2}}
-\institute[USF]{
+\author[C Kwon]{Someone Else\inst{1} \and Changhyun Kwon (권창현)\inst{2}}
+\institute[KAIST]{
   \inst{1}Department of XXX\\University of YYYY
   \and
-  \inst{2}Department of Industrial and Management Systems Engineering\\University of South Florida}
-\date[CONFERENCE 2020]{Very Important Conference 2020}
+  \inst{2}Department of Industrial and Systems Engineering\\KAIST}
+\date[CONFERENCE 2024]{Very Important Conference 2024}
 
 % This line appears at the top, next to the logo
-\department{Industrial and Management Systems Engineering} 
+\department{Industrial and Systems Engineering} 
 
 
 

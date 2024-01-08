@@ -13,17 +13,17 @@
   \def\insertdepartment{#2}%
   \def\beamer@shortdepartment{#1}%
   }
-\department[IMSE]{Industrial and Management System Engineering}
+\department[ISE]{Industrial and System Engineering}
 
 
 
 \setbeamercolor{section in head/foot}{parent=palette tertiary}
-\setbeamercolor{usflogo in head/foot}{parent=palette secondary}
+\setbeamercolor{kaistlogo in head/foot}{parent=palette secondary}
 \setbeamercolor{author in head/foot}{parent=subsection in head/foot}
 \setbeamercolor{title in head/foot}{parent=section in head/foot}
 
 
-\def\beamer@theme@usflogo@none{
+\def\beamer@theme@kaistlogo@none{
   \defbeamertemplate*{headline}{chkwon theme}
   {%
     \begin{beamercolorbox}[colsep=0.2pt]{upper separation line head}
@@ -35,13 +35,13 @@
     \end{beamercolorbox}
   }
 }
-\def\beamer@theme@usflogo@gold{
+\def\beamer@theme@kaistlogo@original{
   \defbeamertemplate*{headline}{chkwon theme}
   {%
     \begin{beamercolorbox}[ht=0.16in,dp=2pt,%
-      leftskip=5pt,rightskip=.3cm plus1fil]{usflogo in head/foot}
-      \usebeamerfont{usflogo in head/foot}
-  		\includegraphics[height=0.13in]{usf-bull-green.pdf}
+      leftskip=5pt,rightskip=.3cm plus1fil]{kaistlogo in head/foot}
+      \usebeamerfont{kaistlogo in head/foot}
+  		\includegraphics[height=0.13in]{KAIST_logo.pdf}
 			\raisebox{1.3ex}{\fontsize{5}{6}\selectfont\sffamily \ \ \ \ \insertdepartment}
     \end{beamercolorbox}%
     \begin{beamercolorbox}[colsep=0.2pt]{upper separation line head}
@@ -53,14 +53,15 @@
     \end{beamercolorbox}
   }
 }
-\def\beamer@theme@usflogo@black{
+\def\beamer@theme@kaistlogo@lettersonly{
   \defbeamertemplate*{headline}{chkwon theme}
   {%
     \begin{beamercolorbox}[ht=0.16in,dp=2pt,%
-      leftskip=5pt,rightskip=.3cm plus1fil]{usflogo in head/foot}
-      \usebeamerfont{usflogo in head/foot}
-  		\includegraphics[height=0.13in]{usf-bull-black.pdf}
+      leftskip=5pt,rightskip=.3cm plus1fil]{kaistlogo in head/foot}
+      \usebeamerfont{kaistlogo in head/foot}
+  		\includegraphics[height=0.13in]{KAIST_logo_letters.pdf}
 			\raisebox{1.3ex}{\fontsize{5}{6}\selectfont\sffamily \ \ \textbar \ \ \insertdepartment}
+%  		\includegraphics[height=0.13in]{comet.pdf}			
     \end{beamercolorbox}%
     \begin{beamercolorbox}[colsep=0.2pt]{upper separation line head}
     \end{beamercolorbox}%
@@ -75,7 +76,7 @@
 %\newif\ifbeamer@theme@usfbull
 %\beamer@theme@usfbullfalse
 
-\DeclareOptionBeamer{usflogo}[none]{\csname beamer@theme@usflogo@#1\endcsname}
+\DeclareOptionBeamer{kaistlogo}[none]{\csname beamer@theme@kaistlogo@#1\endcsname}
 %\DeclareOptionBeamer{usfbull}[true]{\csname beamer@theme@usfbull#1\endcsname}
 \ProcessOptionsBeamer
 

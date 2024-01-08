@@ -5,10 +5,11 @@
 
 \usetheme{Tampa}
 %\usecolortheme{Delta}
-% color theme options: USFyellow, USFgold, Delta  (default: USFyellow)
+% color theme options: Delta  (default: Daejeon)
 
 % Other Beamer color themes:  \usecolortheme{<color theme name>}
 % albatross, beaver, beetle, crane, default, dolphin, dove, fly, lily, orchid, rose, seagull, seahorse, sidebartab, structure, whale, wolverine
+
 
 
 
@@ -22,6 +23,12 @@
              BoldItalicFont={Fira Sans Italic}]%
             {Fira Sans Light}%
 \setmonofont[BoldFont={Fira Mono Medium}]{Fira Mono}%
+
+% 한글 포트 셋팅. Noto Sans KR
+% https://fonts.google.com/noto/specimen/Noto+Sans+KR
+\usepackage{xetexko}
+\setmainhangulfont[BoldFont={Noto Sans KR}]{Noto Sans KR Light}
+\setsanshangulfont[BoldFont={Noto Sans KR}]{Noto Sans KR Light}
 
 % or simply use metropolis for Fira Sans
 % metropolis theme:  https://github.com/matze/mtheme
@@ -104,12 +111,12 @@
 
 
 \title{Presentation Slide Template}
-\author[C Kwon]{Someone Else\inst{1} \and Changhyun Kwon\inst{2}}
-\institute[USF]{
+\author[C Kwon]{Someone Else\inst{1} \and Changhyun Kwon (권창현)\inst{2}}
+\institute[KAIST]{
   \inst{1}Department of XXX\\University of YYYY
   \and
-  \inst{2}Department of Industrial and Management Systems Engineering\\University of South Florida}
-\date[CONFERENCE 2020]{Very Important Conference 2020}
+  \inst{2}Department of Industrial and Systems Engineering\\KAIST}
+\date[CONFERENCE 2024]{Very Important Conference 2024}
 
 
 

@@ -1,0 +1,53 @@
+% Copyright 2007 by Till Tantau
+% Copyright 2015 by Vedran Mileti\'c, Joseph Wright
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+
+
+\setbeamercolor{section in head/foot}{parent=palette tertiary}
+\setbeamercolor{author in head/foot}{parent=subsection in head/foot}
+\setbeamercolor{title in head/foot}{parent=section in head/foot}
+
+
+
+\mode<presentation>
+
+
+\defbeamertemplate*{headline}{TampaPalms theme}
+{%
+  \begin{beamercolorbox}[colsep=0.2pt]{upper separation line head}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\bfseries\insertsectionnavigationhorizontal{\paperwidth}{}{}\vskip2pt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[colsep=0.2pt]{lower separation line head}
+  \end{beamercolorbox}
+}
+
+\defbeamertemplate*{footline}{TampaPalms theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{footline}%
+		\hspace*{.5cm} \insertshortauthor\ (\insertshortinstitute)
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{footline}%
+    \insertshortdate   
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{footline}%
+    \insertframenumber{} / \inserttotalframenumber    \hspace*{.5cm}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+
+
+\mode
+<all>
