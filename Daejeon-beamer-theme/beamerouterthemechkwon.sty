@@ -1,0 +1,121 @@
+% Copyright 2007 by Till Tantau
+% Copyright 2015 by Vedran Mileti\'c, Joseph Wright
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\def\department{\@dblarg\beamer@department}
+\long\def\beamer@department[#1]#2{%
+  \def\insertdepartment{#2}%
+  \def\beamer@shortdepartment{#1}%
+  }
+\department[ISE]{Industrial and System Engineering}
+
+
+
+\setbeamercolor{section in head/foot}{parent=palette tertiary}
+\setbeamercolor{kaistlogo in head/foot}{parent=palette secondary}
+\setbeamercolor{author in head/foot}{parent=subsection in head/foot}
+\setbeamercolor{title in head/foot}{parent=section in head/foot}
+
+
+\def\beamer@theme@kaistlogo@none{
+  \defbeamertemplate*{headline}{chkwon theme}
+  {%
+    \begin{beamercolorbox}[colsep=0.2pt]{upper separation line head}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}{section in head/foot}
+      \vskip2pt\bfseries\insertsectionnavigationhorizontal{\paperwidth}{}{}\vskip2pt
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=0.2pt]{lower separation line head}
+    \end{beamercolorbox}
+  }
+}
+\def\beamer@theme@kaistlogo@original{
+  \defbeamertemplate*{headline}{chkwon theme}
+  {%
+    \begin{beamercolorbox}[ht=0.16in,dp=2pt,%
+      leftskip=5pt,rightskip=.3cm plus1fil]{kaistlogo in head/foot}
+      \usebeamerfont{kaistlogo in head/foot}
+  		\includegraphics[height=0.13in]{KAIST_logo.pdf}
+			\raisebox{1.3ex}{\fontsize{5}{6}\selectfont\sffamily \ \ \ \ \insertdepartment}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=0.2pt]{upper separation line head}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}{section in head/foot}
+      \vskip2pt\bfseries\insertsectionnavigationhorizontal{\paperwidth}{}{}\vskip2pt
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=0.2pt]{lower separation line head}
+    \end{beamercolorbox}
+  }
+}
+\def\beamer@theme@kaistlogo@lettersonly{
+  \defbeamertemplate*{headline}{chkwon theme}
+  {%
+    \begin{beamercolorbox}[ht=0.16in,dp=2pt,%
+      leftskip=5pt,rightskip=.3cm plus1fil]{kaistlogo in head/foot}
+      \usebeamerfont{kaistlogo in head/foot}
+  		\includegraphics[height=0.13in]{KAIST_logo_letters.pdf}
+			\raisebox{1.3ex}{\fontsize{5}{6}\selectfont\sffamily \ \ \textbar \ \ \insertdepartment}
+%  		\includegraphics[height=0.13in]{comet.pdf}			
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=0.2pt]{upper separation line head}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}{section in head/foot}
+      \vskip2pt\bfseries\insertsectionnavigationhorizontal{\paperwidth}{}{}\vskip2pt
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=0.2pt]{lower separation line head}
+    \end{beamercolorbox}
+  }
+}
+
+%\newif\ifbeamer@theme@usfbull
+%\beamer@theme@usfbullfalse
+
+\DeclareOptionBeamer{kaistlogo}[none]{\csname beamer@theme@kaistlogo@#1\endcsname}
+%\DeclareOptionBeamer{usfbull}[true]{\csname beamer@theme@usfbull#1\endcsname}
+\ProcessOptionsBeamer
+
+
+\mode<presentation>
+
+
+
+\defbeamertemplate*{footline}{chkwon theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{footline}%
+		\hspace*{.5cm} \insertshortauthor\ (\insertshortinstitute)
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{footline}%
+    \insertshortdate   
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{footline}%
+    \insertframenumber{} / \inserttotalframenumber    \hspace*{.5cm}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+
+%%%%%% USF Bull Background %%%%%%%%%%%%%%%%%%%%%%
+%
+%\RequirePackage{tikz}
+%
+%\ifbeamer@theme@usfbull%
+%  \usebackgroundtemplate{%
+%  \tikz[overlay,remember picture] \node[opacity=0.05, inner sep=0, anchor=center, at=(current page.center)] {
+%     \includegraphics[height=2.5in]{u-bulls-gray.pdf}}; %
+%  }%
+%\fi
+
+
+
+
+\mode
+<all>

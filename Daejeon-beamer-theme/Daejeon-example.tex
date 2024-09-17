@@ -1,17 +1,10 @@
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
 
-\documentclass[10pt]{beamer}
-
-\usetheme{Tampa}
-%\usecolortheme{Delta}
-% color theme options: Delta  (default: Daejeon)
-
-% Other Beamer color themes:  \usecolortheme{<color theme name>}
-% albatross, beaver, beetle, crane, default, dolphin, dove, fly, lily, orchid, rose, seagull, seahorse, sidebartab, structure, whale, wolverine
+\documentclass[mathserif,10pt]{beamer}
 
 
-
+\usetheme{Daejeon}
 
 % Some font recommendation, compile with xelatex
 % Get Fira Sans fonts:   https://github.com/mozilla/Fira
@@ -30,9 +23,25 @@
 \setmainhangulfont[BoldFont={Noto Sans KR}]{Noto Sans KR Light}
 \setsanshangulfont[BoldFont={Noto Sans KR}]{Noto Sans KR Light}
 
-% or simply use metropolis for Fira Sans
-% metropolis theme:  https://github.com/matze/mtheme
-%\usefonttheme{metropolis} 
+
+
+
+
+\title{PRESENTATION SLIDE TEMPLATE}
+\author[C Kwon]{Someone Else\inst{1} \and Changhyun Kwon (권창현)\inst{2}}
+\institute[KAIST]{
+  \inst{1}Department of XXX\\University of YYYY
+  \and
+  \inst{2}Department of Industrial and Systems Engineering\\KAIST}
+\date[CONFERENCE 2024]{Very Important Conference 2024}
+
+% This line appears at the top, next to the logo
+\department{Industrial and Systems Engineering} 
+
+
+
+
+
 
 
 
@@ -101,30 +110,13 @@
 
 \everymath{\displaystyle}
 
-
-
-
-
-
-
-
-
-
-\title{Presentation Slide Template}
-\author[C Kwon]{Someone Else\inst{1} \and Changhyun Kwon (권창현)\inst{2}}
-\institute[KAIST]{
-  \inst{1}Department of XXX\\University of YYYY
-  \and
-  \inst{2}Department of Industrial and Systems Engineering\\KAIST}
-\date[CONFERENCE 2024]{Very Important Conference 2024}
-
-
-
-
 \begin{document}
 
 
+
+
 \input{frames}
+
 
 
 \end{document}
