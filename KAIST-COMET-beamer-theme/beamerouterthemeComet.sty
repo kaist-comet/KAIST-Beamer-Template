@@ -65,8 +65,14 @@
                     \usebeamerfont{title page author}
                     \usebeamercolor[fg]{title page author}
                         \insertauthor
-                    \par \vspace{0.3cm}
-                }
+                    \par \vspace{0.6cm}
+                    % Title page template modification
+                    \ifdefempty{\cometlogofile}{
+                                            % No logo displayed if the file path is empty
+                    }{
+                        \includegraphics[width=6cm]{\cometlogofile} 
+                    }                    
+                                    }
             \vfill
         }
     \end{beamercolorbox}

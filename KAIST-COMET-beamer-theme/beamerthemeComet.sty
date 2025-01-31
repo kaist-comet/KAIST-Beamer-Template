@@ -12,7 +12,18 @@
 
 \ProvidesPackage{beamerthemeComet}
 
+% Add this near the top of beamerthemeComet.sty
+\RequirePackage{etoolbox}
 
+% Define a command to store the selected logo file
+\newcommand{\cometlogofile}{}
+
+% Parse the logo option
+\DeclareOption{logo=none}{\renewcommand{\cometlogofile}{}} % Empty file path
+\DeclareOption{logo=ise}{\renewcommand{\cometlogofile}{logos/KAIST_ISE_logo_light.pdf}}
+\DeclareOption{logo=gsds}{\renewcommand{\cometlogofile}{logos/KAIST_GSDS_logo_light.pdf}}
+
+\ProcessOptions\relax
 
 
 % Use the outer theme and pass the kaistlogo option dynamically
