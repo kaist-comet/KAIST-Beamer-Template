@@ -7,6 +7,8 @@ Created by Changhyun Kwon
 
 - [Fira Sans](https://github.com/mozilla/Fira)
 - [Noto Sans KR](https://fonts.google.com/noto/specimen/Noto+Sans+KR)
+- [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- [Pretendard](https://github.com/orioncactus/pretendard)
 
 ## Tampa Theme
 
