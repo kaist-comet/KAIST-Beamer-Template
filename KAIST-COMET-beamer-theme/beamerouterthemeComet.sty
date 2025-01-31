@@ -1,0 +1,203 @@
+% Copyright 2007 by Till Tantau
+% Copyright 2015 by Vedran Mileti\'c, Joseph Wright
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\def\department{\@dblarg\beamer@department}
+\long\def\beamer@department[#1]#2{%
+  \def\insertdepartment{#2}%
+  \def\beamer@shortdepartment{#1}%
+  }
+\department[ISE]{Industrial and System Engineering}
+
+
+
+\setbeamercolor{section in head/foot}{parent=palette tertiary}
+\setbeamercolor{kaistlogo in head/foot}{parent=palette secondary}
+\setbeamercolor{author in head/foot}{parent=subsection in head/foot}
+\setbeamercolor{title in head/foot}{parent=section in head/foot}
+
+\defbeamertemplate*{title page}{comet theme}
+
+\setbeamertemplate{title page}
+{
+    \begin{beamercolorbox}[wd=\paperwidth, ht=\paperheight, center, sep=0pt]{title page background}
+        \vbox to \paperheight{
+                \vspace{0.5cm}
+                \setlength{\parindent}{0pt}
+
+                {   
+                    \hspace{0.5cm}
+                    \raggedright
+                    \parbox{\dimexpr\paperwidth-2cm\relax}{
+                        \includegraphics[height=0.3cm]{logos/KAIST_logo_letters_light.pdf}
+                        \raisebox{-0.05cm}{
+                            \includegraphics[height=0.4cm]{logos/comet-logo-light.pdf} 
+                        }
+                        \usebeamerfont{title page logo}
+                        \usebeamercolor[fg]{title page author}
+                        \raisebox{0.03cm}{
+                            \textbf{C}OMPUTATIONAL \textbf{O}PTIMIZATION \textbf{MET}HODS LAB
+                        }
+                    }
+                    \par
+                }
+                \vspace{2cm}
+                {
+                    \hspace{0.3cm}
+                    \raggedright
+                    \usebeamerfont{title page title}
+                    \usebeamercolor[fg]{title page title}
+                    \parbox{\dimexpr\paperwidth-2cm\relax}{
+                        \inserttitle
+                    }
+                    \par
+                }
+                \vspace{1cm}
+
+                {
+                    \centering
+                    \usebeamerfont{title page author}
+                    \usebeamercolor[fg]{title page author}
+                        \insertauthor
+                    \par \vspace{0.3cm}
+                }
+            \vfill
+        }
+    \end{beamercolorbox}
+}
+
+
+
+
+
+
+  \defbeamertemplate*{headline}{comet theme}
+  {%
+%     \begin{beamercolorbox}[ht=0.16in,dp=2pt,%
+%       leftskip=5pt,rightskip=.3cm plus1fil]{kaistlogo in head/foot}
+%       \usebeamerfont{kaistlogo in head/foot}
+%   		\includegraphics[height=0.13in]{KAIST_logo_letters.pdf}
+% 			\raisebox{1.3ex}{\fontsize{5}{6}\selectfont\sffamily \ \ \textbar \ \ \insertdepartment}
+% %  		\includegraphics[height=0.13in]{comet.pdf}			
+%     \end{beamercolorbox}%
+%     \begin{beamercolorbox}[colsep=0.2pt]{upper separation line head}
+%     \end{beamercolorbox}%
+%     \begin{beamercolorbox}{section in head/foot}
+%       \vskip2pt\bfseries\insertsectionnavigationhorizontal{\paperwidth}{}{}\vskip2pt
+%     \end{beamercolorbox}%
+%     \begin{beamercolorbox}[colsep=0.2pt]{lower separation line head}
+%     \end{beamercolorbox}
+    \vspace{0.2cm}
+  }
+
+
+%\newif\ifbeamer@theme@usfbull
+%\beamer@theme@usfbullfalse
+
+\newcommand\comet{\raisebox{-0.15cm}{\includegraphics[height=0.75cm]{logos/comet-logo-white-bg.pdf}\hspace{0.3cm}}}
+\newcommand\nub{\raisebox{-0.25cm}{\includegraphics[height=1cm]{logos/nub.jpg}\hspace{0.3cm}}}
+\newcommand\geese{\raisebox{-0.2cm}{\includegraphics[height=1cm]{logos/geese.png}\hspace{0.3cm}}}
+\newcommand\cross{\raisebox{-0.15cm}{\includegraphics[height=0.80cm]{logos/cross.png}\hspace{0.3cm}}}
+\newcommand\nubexp{\raisebox{-0.25cm}{\includegraphics[height=1cm]{logos/nubexp.png}\hspace{0.3cm}}}
+
+\setbeamertemplate{frametitle}
+{
+    \begin{beamercolorbox}[wd=\paperwidth, ht=1.8ex, dp=0.5ex, leftskip=0.8cm, sep=0pt]{frametitle}
+        \hbox{%
+            \usebeamerfont{frametitle}%
+            \insertframetitle%
+        }
+    \end{beamercolorbox}
+}
+
+\setbeamertemplate{sectionframetitle}
+{
+    \vspace{3cm}
+    \begin{beamercolorbox}[wd=\paperwidth, ht=3ex, dp=1ex, leftskip=0.5cm, sep=0pt]{frametitle}
+        \hbox{%
+            \usebeamerfont{frametitle}%
+            \insertframetitle
+        }
+    \end{beamercolorbox}
+}
+
+\newenvironment{sectionframe}[2]{
+    % Switch to custom template and settings for the section frame
+    \setbeamercolor{background canvas}{bg=sectionbg}
+    \setbeamercolor{footline}{fg=KAISTDarkBlue, bg=sectionbg}
+    \begin{frame}
+        \begin{beamercolorbox}[wd=\paperwidth, ht=6ex, dp=1ex, leftskip=0.8cm, rightskip=0.8cm, sep=0pt]{sectiontitle}%
+            \parbox{\textwidth}{
+                \usebeamerfont{frametitle}%
+                #1
+            }
+        \end{beamercolorbox} %
+        \vspace{2cm}
+        \begin{beamercolorbox}[wd=\paperwidth, ht=3ex, dp=1ex, leftskip=0.8cm, rightskip=0.8cm, sep=0pt]{sectionsubtitle}%
+            \parbox{\textwidth}{
+                \usebeamerfont{sectionsubtitle}%
+                #2%
+            }
+        \end{beamercolorbox}             
+}{
+    \end{frame}
+    % Reset frametitle template after the sectionframe is done
+}
+
+
+\mode<presentation>
+
+
+
+\defbeamertemplate*{footline}{comet theme}
+{
+  \leavevmode%
+    \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{footline}%
+		\hspace*{.5cm}     {
+            \raggedright
+            \setlength{\parindent}{0pt}
+            \parbox{\dimexpr\paperwidth-2cm\relax}{
+                \includegraphics[height=0.3cm]{logos/KAIST_logo_letters.pdf}
+                \raisebox{-0.05cm}{
+                    \includegraphics[height=0.4cm]{logos/comet-logo.pdf} 
+                }
+            }
+            \par
+        }  
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{footline}%
+        %\insertshortdate   
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{footline}%
+    {\usebeamerfont{page number} \insertframenumber{} / \inserttotalframenumber} \hspace*{.5cm}
+  \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+  \vspace{0.15cm}
+}
+
+
+
+%%%%%% USF Bull Background %%%%%%%%%%%%%%%%%%%%%%
+%
+%\RequirePackage{tikz}
+%
+%\ifbeamer@theme@usfbull%
+%  \usebackgroundtemplate{%
+%  \tikz[overlay,remember picture] \node[opacity=0.05, inner sep=0, anchor=center, at=(current page.center)] {
+%     \includegraphics[height=2.5in]{u-bulls-gray.pdf}}; %
+%  }%
+%\fi
+
+
+
+
+\mode
+<all>
