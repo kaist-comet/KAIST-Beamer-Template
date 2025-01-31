@@ -12,11 +12,15 @@ Created by Changhyun Kwon
 
 The same `Tampa` theme from https://github.com/STOM-Group/USF-Beamer-Template.
 
-With the `Daejeon` color them: [demo](https://github.com/kaist-comet/KAIST-Beamer-Template/blob/master/Tampa-beamer-theme/Daejeon-example.pdf)
+With the `Daejeon` color theme: [demo](https://github.com/kaist-comet/KAIST-Beamer-Template/blob/master/Tampa-beamer-theme/Daejeon-example.pdf)
 
 ## KAIST Theme
 
-A Tampa-variant including USF logo: [demo](https://github.com/kaist-comet/KAIST-Beamer-Template/blob/master/KAIST-beamer-theme/KAISTblue-example.pdf)
+A Tampa-variant including KAIST logo: [demo](https://github.com/kaist-comet/KAIST-Beamer-Template/blob/master/KAIST-beamer-theme/KAISTblue-example.pdf)
+
+## KAIST COMET Theme
+
+A cutomized theme for my lab: [demo](https://github.com/kaist-comet/KAIST-Beamer-Template/blob/master/KAIST-COMET-beamer-theme/comet_beamer_example.pdf)
 
 ## KAIST Poster template
 
